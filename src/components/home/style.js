@@ -26,7 +26,7 @@ Wrapper.Cont = styled.div`
   );
 `;
 Wrapper.Left = styled.div`
-  width: 800px;
+  width: 900px;
   border-right: 2px solid grey;
 `;
 Wrapper.Wrap = styled.div`
@@ -58,7 +58,9 @@ Wrapper.Li = styled.li`
   font-family: "Forum", cursive;
   font-size: 20px;
 `;
-Wrapper.Right = styled.div``;
+Wrapper.Right = styled.div`
+
+`;
 Wrapper.RightTitle = styled.div`
   font-size: 30px;
   font-weight: 600;

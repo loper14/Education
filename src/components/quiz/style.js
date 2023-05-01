@@ -65,7 +65,7 @@ Wrapper.Submit = styled(Button)`
 `;
 Wrapper.Title = styled.div`
   font-size: 24px;
-  padding: 30px 0;
+  padding: 30px 10px;
 `;
 Wrapper.Msg = styled.div`
   font-size: 24px;
