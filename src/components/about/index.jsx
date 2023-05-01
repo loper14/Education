@@ -1,5 +1,7 @@
 import React from "react";
 import { Wrapper } from "./style";
+import img1 from "../../assets/imgs/tobe1.png";
+import img2 from "../../assets/imgs/tobe2.png";
 
 const About = () => {
   return (
@@ -25,11 +27,14 @@ const About = () => {
         yoki "She is a doctor ". <br /> 4. Savol va inkorlarda bo‘lish fe’lidan
         foydalaning. Masalan, "Are you coming?" yoki "I'm bot going".
       </Wrapper.Text>
+      <Wrapper.Img width={450} height={220} src={img1} />
+      <br />
       <Wrapper.Text>
         <Wrapper.Bold>To be fe'li orqali gap tuzish</Wrapper.Bold>
         To be fe'li quyidagi struktura yordamida tuziladi: 'Subject + to be +
         verb' <br /> Misol uchun: ' I am pupil ', ' You are beautiful '
       </Wrapper.Text>
+
       <Wrapper.Text style={{ marginBottom: "30px" }}>
         <Wrapper.Bold>
           To be fe'lini darak, inkor va so'roq shakllarda foydalanish
@@ -38,6 +43,9 @@ const About = () => {
         Inkor shakli: I am not tired. He is not coming. We are not going. <br />
         So'roq shakli: Am I late? Is she your sister? Are they ready?
       </Wrapper.Text>
+      <Wrapper.Img width={550} height={265} src={img2} />
+      <br />
+      <br />
     </Wrapper>
   );
 };

@@ -29,6 +29,10 @@ Wrapper.Left = styled.div`
   width: 800px;
   border-right: 2px solid grey;
 `;
+Wrapper.Wrap = styled.div`
+  overflow: auto;
+  height: 500px;
+`;
 Wrapper.SubjectName = styled.div`
   font-size: 40px;
   font-weight: 600;

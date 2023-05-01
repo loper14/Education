@@ -20,25 +20,28 @@ const Home = () => {
                 Mavzu: <Wrapper.ThemeName>To Be fe'li</Wrapper.ThemeName>
               </Wrapper.Theme>
             </Wrapper.Cont>
-            {render === "dars" ? (
-              <Wrapper.PlanRender>
-                <Wrapper.Plan>Reja:</Wrapper.Plan>
-                <Wrapper.Ul>
-                  <Wrapper.Li>To be fe'li nima?</Wrapper.Li>
-                  <Wrapper.Li>To be fe'lining ishlatilishi</Wrapper.Li>
-                  <Wrapper.Li>To be fe'li orqali gap tuzish </Wrapper.Li>
-                  <Wrapper.Li>
-                    To be fe'lini darak, inkor va so'roq shakllarda foydalanish
-                  </Wrapper.Li>
-                </Wrapper.Ul>
-              </Wrapper.PlanRender>
-            ) : render === "about" ? (
-              <About />
-            ) : render === "video" ? (
-              <Video />
-            ) : (
-              <Quiz />
-            )}
+            <Wrapper.Wrap>
+              {render === "dars" ? (
+                <Wrapper.PlanRender>
+                  <Wrapper.Plan>Reja:</Wrapper.Plan>
+                  <Wrapper.Ul>
+                    <Wrapper.Li>To be fe'li nima?</Wrapper.Li>
+                    <Wrapper.Li>To be fe'lining ishlatilishi</Wrapper.Li>
+                    <Wrapper.Li>To be fe'li orqali gap tuzish </Wrapper.Li>
+                    <Wrapper.Li>
+                      To be fe'lini darak, inkor va so'roq shakllarda
+                      foydalanish
+                    </Wrapper.Li>
+                  </Wrapper.Ul>
+                </Wrapper.PlanRender>
+              ) : render === "about" ? (
+                <About />
+              ) : render === "video" ? (
+                <Video />
+              ) : (
+                <Quiz />
+              )}
+            </Wrapper.Wrap>
           </Wrapper.Left>
           <Wrapper.Right>
             <Wrapper.RightTitle>Dars menyusi</Wrapper.RightTitle>
