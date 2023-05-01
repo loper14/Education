@@ -1,5 +1,5 @@
 import React from "react";
-import vid1 from "../../assets/videos/video.mp4";
+import vid1 from "../../assets/videos/video1.mp4";
 import vid2 from "../../assets/videos/video2.mp4";
 import { Wrapper } from "./style";
 

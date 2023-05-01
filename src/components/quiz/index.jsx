@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Button, Input, Modal, Radio, notification } from "antd";
+import { Button, Input, Modal, notification } from "antd";
 import { Wrapper } from "./style";
 
 function Quiz() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   let [selectedAnswer, setSelectedAnswer] = useState("");
-  let [exrta, setExtra] = useState(false);
   let [name, setName] = useState("");
   let [start, setStart] = useState(false);
   let [isClick, setIsClick] = useState(false);

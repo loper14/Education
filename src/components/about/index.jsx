@@ -30,7 +30,7 @@ const About = () => {
         To be fe'li quyidagi struktura yordamida tuziladi: 'Subject + to be +
         verb' <br /> Misol uchun: ' I am pupil ', ' You are beautiful '
       </Wrapper.Text>
-      <Wrapper.Text>
+      <Wrapper.Text style={{ marginBottom: "30px" }}>
         <Wrapper.Bold>
           To be fe'lini darak, inkor va so'roq shakllarda foydalanish
         </Wrapper.Bold>

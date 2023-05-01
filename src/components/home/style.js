@@ -9,7 +9,7 @@ Wrapper.Flexer = styled.div`
   display: flex;
   justify-content: center;
   grid-gap: 50px;
-  padding-top: 60px;
+  padding-top: 100px;
 `;
 Wrapper.Cont = styled.div`
   background-color: rgb(93, 155, 231);
