@@ -7,11 +7,35 @@ const App = () => {
       .then((response) => {
         return response.json();
       })
-      .then((data) => setData(data))
+      .then((res) => setData(res))
       .catch((err) => console.log(err));
   }, []);
-
-  return <div>{JSON.stringify(data)}</div>;
+  return (
+    <div>
+      <table border={1} align="center" style={{ marginTop: "100px" }}>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fullname</th>
+            <th>Username</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data?.map((value) => {
+            return (
+              <tr key={value.id}>
+                <td>{value.id}</td>
+                <td>{value.fullname}</td>
+                <td>{value.username}</td>
+                <td>{value.password}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default App;
