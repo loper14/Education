@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Button, Input, Modal, notification } from "antd";
 import { Wrapper } from "./style";
+import { setScoreByRedux } from "../../redux/slices/slice";
+import { useDispatch } from "react-redux";
 
 function Quiz() {
+  let dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState(false);
   let [selectedAnswer, setSelectedAnswer] = useState("");
   let [name, setName] = useState("");
@@ -78,12 +81,12 @@ function Quiz() {
     }
     setCurrentQuestion(currentQuestion + 1);
   };
-
   const success = () => {
     Modal.success({
       onOk: () => {
         setStart(false);
         setCurrentQuestion(0);
+        dispatch(setScoreByRedux(score));
       },
       content: (
         <div>
