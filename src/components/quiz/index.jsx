@@ -140,7 +140,7 @@ function Quiz() {
                 </Wrapper.Option>
               ))}
               <Wrapper.Submit type="primary" onClick={submit}>
-                Submit
+                Jo'natish
               </Wrapper.Submit>
 
               <Wrapper.QuestionLength>
