@@ -32,6 +32,28 @@ Wrapper.SubmitBtn = styled(Button)`
   height: 50px;
   font-size: 20px;
   margin-top: 25px;
+  ${({ warningAnimation }) =>
+    warningAnimation &&
+    `
+    animation: rotate 0.7s ease-in-out both;
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  `}
 `;
 Wrapper.WarningTitle = styled.div`
   font-size: 20px;

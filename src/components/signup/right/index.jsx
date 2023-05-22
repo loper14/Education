@@ -7,6 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { useSignIn } from "react-auth-kit";
 
 const Right = () => {
+  const [playingAnimaton, setPlayingAnimaton] = useState(false);
+  const warningAnimationHandler = () => {
+    setPlayingAnimaton(true);
+    setTimeout(() => {
+      setPlayingAnimaton(false);
+    }, 1000);
+  };
   const [api, contextHolder] = notification.useNotification();
   const openNotificationWithIcon = (type) => {
     notification[type]({
@@ -26,6 +33,7 @@ const Right = () => {
   let onSubmit = () => {
     if (!data.name || !data.surname || !data.group) {
       openNotificationWithIcon("warning");
+      warningAnimationHandler();
       return;
     }
     signin({
@@ -45,6 +53,7 @@ const Right = () => {
       navigate("/");
     }, 2000);
   };
+
   return (
     <Wrapper>
       {contextHolder}
@@ -94,7 +103,11 @@ const Right = () => {
             },
           ]}
         />
-        <Wrapper.SubmitBtn type="primary" onClick={onSubmit}>
+        <Wrapper.SubmitBtn
+          warningAnimation={playingAnimaton}
+          type="primary"
+          onClick={onSubmit}
+        >
           {loading ? <LoadingOutlined /> : "Jo'natish"}
         </Wrapper.SubmitBtn>
       </Wrapper.Left>
