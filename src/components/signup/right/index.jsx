@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import { Wrapper } from "./style";
 import signLogo from "../../../assets/imgs/sign-logo.jpg";
-import { Select } from "antd";
+import { Select, notification } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { useSignIn } from "react-auth-kit";
 
 const Right = () => {
+  const [api, contextHolder] = notification.useNotification();
+  const openNotificationWithIcon = (type) => {
+    notification[type]({
+      message: <Wrapper.WarningTitle>Diqqat!</Wrapper.WarningTitle>,
+      description: (
+        <Wrapper.WarningTitle2>
+          Iltimos barcha maydonlarni to'ldiring
+        </Wrapper.WarningTitle2>
+      ),
+    });
+  };
   let signin = useSignIn();
   let navigate = useNavigate();
   let [loading, setLoading] = useState(false);
@@ -14,7 +25,7 @@ const Right = () => {
 
   let onSubmit = () => {
     if (!data.name || !data.surname || !data.group) {
-      alert("Fill");
+      openNotificationWithIcon("warning");
       return;
     }
     signin({
@@ -36,6 +47,7 @@ const Right = () => {
   };
   return (
     <Wrapper>
+      {contextHolder}
       <Wrapper.Left>
         <Wrapper.LeftImgDiv>
           <Wrapper.LeftImg src={signLogo} />

@@ -9,4 +9,6 @@ Wrapper.Bold = styled.div`
 Wrapper.Img = styled.img`
   margin-top: 25px;
 `;
-Wrapper.Text = styled.div``;
+Wrapper.Text = styled.div`
+  font-size: large;
+`;

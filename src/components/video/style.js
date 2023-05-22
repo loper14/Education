@@ -6,10 +6,10 @@ Wrapper.Text = styled.div`
   margin: 20px 0;
 `;
 Wrapper.Video = styled.video`
-  width: 96%;
-  height: auto;
+  width: 80%;
+  height: 500px;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   outline: none;

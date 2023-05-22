@@ -8,7 +8,7 @@ export let Slice = createSlice({
 
   reducers: {
     setScoreByRedux(state, action) {
-      state.count = action.payload;
+      state.count += action.payload;
     },
   },
 });

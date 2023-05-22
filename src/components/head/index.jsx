@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Wrapper } from "./style";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useAuthUser, useSignOut } from "react-auth-kit";
-import { Avatar, Drawer, Input, Modal } from "antd";
+import { Avatar, Drawer, Input, Modal, Select } from "antd";
 import { ExclamationCircleFilled, LoginOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 
@@ -58,7 +58,7 @@ const Head = () => {
         </Wrapper.TextContainer>
         <Wrapper.TextContainer>
           <Wrapper.Text>O'zlashtirish darajangiz:</Wrapper.Text>
-          <Input size="large" value={(count / 5) * 70 + "%"} />
+          <Input size="large" value={(count / 5) * 40 + "%"} />
         </Wrapper.TextContainer>
         <Wrapper.LogoutBtn danger onClick={showConfirm}>
           Chiqish <LoginOutlined style={{ fontSize: "20px" }} />
@@ -72,9 +72,59 @@ const Head = () => {
           </Wrapper.Title>
           <Wrapper.Text>{auth().group}</Wrapper.Text>
           <Wrapper.Text style={{ marginLeft: "15px" }}>
-            O'zlashtirish darajangiz: {(count / 5) * 70}%
+            O'zlashtirish darajangiz: {(count / 5) * 40}%
           </Wrapper.Text>
         </Wrapper.Left>
+        <Wrapper.SubDiv>
+          <Wrapper.Subject>Fan: </Wrapper.Subject>
+          <Select
+            defaultValue="Ingliz tili"
+            size="large"
+            style={{
+              width: 170,
+              fontSize: "20px",
+              border: "none",
+            }}
+            options={[
+              {
+                value: "Ingliz tili",
+                label: "Ingliz tili",
+              },
+              {
+                value: "Informatika",
+                label: "Informatika",
+              },
+              {
+                value: "Matematika",
+                label: "Matematika",
+              },
+              {
+                value: "Fizika",
+                label: "Fizika",
+              },
+              {
+                value: "Shaxsiy kompyuter",
+                label: "Shaxsiy kompyuter",
+              },
+              {
+                value: "Rus tili",
+                label: "Rus tili",
+              },
+              {
+                value: "Geografiya",
+                label: "Geografiya",
+              },
+              {
+                value: "Algoritm asoslari",
+                label: "Algoritm asoslari",
+              },
+              {
+                value: "Kimyo",
+                label: "Kimyo",
+              },
+            ]}
+          />
+        </Wrapper.SubDiv>
         <Wrapper.Right>
           <Avatar
             onClick={showDrawer}

@@ -16,9 +16,16 @@ Wrapper.Container = styled.div`
   padding-top: 20px;
 `;
 Wrapper.Left = styled.div``;
+Wrapper.SubDiv = styled.div`
+  display: flex;
+  grid-gap: 10px;
+`;
+Wrapper.Subject = styled.div`
+  font-size: 30px;
+`;
 Wrapper.Title = styled.div`
-  font-weight: 700;
   font-size: 25px;
+  font-weight: 700;
   margin-bottom: 7px;
 `;
 Wrapper.Text = styled.span`

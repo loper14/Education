@@ -33,3 +33,9 @@ Wrapper.SubmitBtn = styled(Button)`
   font-size: 20px;
   margin-top: 25px;
 `;
+Wrapper.WarningTitle = styled.div`
+  font-size: 20px;
+`;
+Wrapper.WarningTitle2 = styled.div`
+  font-size: 16px;
+`;
